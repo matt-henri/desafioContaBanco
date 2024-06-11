@@ -1,35 +1,13 @@
 package ContaBanco;
 
-public class ContaCorrente {
+public class ContaCorrente extends Conta {
 	
-	private int agencia;
-	private int numero;
-	private double saldo;
-	
-	public void sacar() {
-		
-	}
-	
-	public void depositar() {
-		
-	}
-	
-	public void transferir() {
-		
-	}
+	private static int SEQUENCIAL = 1;
 
-	public int getAgencia() {
-		return agencia;
+	public ContaCorrente() {
+		super.agencia = AGENCIA_PADRAO;
+		super.numero = SEQUENCIAL++;
 	}
-
-	public int getNumero() {
-		return numero;
-	}
-
-	public double getSaldo() {
-		return saldo;
-	}
-	
 	
 	
 	

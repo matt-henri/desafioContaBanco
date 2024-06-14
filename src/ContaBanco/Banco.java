@@ -46,7 +46,23 @@ public class Banco {
 			System.out.println("3. Realizar o Saque");
 			System.out.println("4. Encerar");
 			opcao = scanner.nextInt();
+			
+			switch(opcao) {
+				case 1:
+					System.out.println("Saldo: R$ " + consultarSaldo());
+					break;
+				case 2: 
+					System.out.println("Digite o valor do deposito: ");
+					double valorDeposito = scanner.nextDouble();
+					break;
+				case 3:
+					
+			}	
+			
+			
 		} while (opcao != 4);
+		
+		scanner.close();
 	}
 	
 	

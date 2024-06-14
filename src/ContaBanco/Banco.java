@@ -16,6 +16,52 @@ public class Banco {
 		this.saldo = 0.0;
 	}
 	
+	
+	public String getNome() {
+		return nome;
+	}
+
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+
+	public String getSobrenome() {
+		return sobrenome;
+	}
+
+
+	public void setSobrenome(String sobrenome) {
+		this.sobrenome = sobrenome;
+	}
+
+
+	public String getCpf() {
+		return cpf;
+	}
+
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+
+
+	public double getSaldo() {
+		return saldo;
+	}
+
+
+	public void setSaldo(double saldo) {
+		this.saldo = saldo;
+	}
+
+
+
+
+
+
+
 	public double consultarSaldo() {
 		return saldo;
 	}
@@ -53,10 +99,19 @@ public class Banco {
 					break;
 				case 2: 
 					System.out.println("Digite o valor do deposito: ");
-					double valorDeposito = scanner.nextDouble();
+					double ValorDeposito = scanner.nextDouble();
+					depositar(ValorDeposito);
 					break;
 				case 3:
-					
+					System.out.println("Digite o valor do saque:");
+					double ValorSaque = scanner.nextDouble();
+					sacar(ValorSaque);
+					break;
+				case 4:
+					System.out.println("Encerrando...");
+					break;
+					default:
+					System.out.println("Opção invalida!");
 			}	
 			
 			
@@ -64,21 +119,5 @@ public class Banco {
 		
 		scanner.close();
 	}
-	
-	
-	
-		
-
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-	
-	
-	
-	
 	
 }
